@@ -1,4 +1,4 @@
-# NanaTech | Organic Architecture
+<img src="{}" /># NanaTech | Organic Architecture
 
 ##Form login &amp; Form registration page.
 
