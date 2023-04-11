@@ -1,4 +1,4 @@
-<img src="{}" /># NanaTech | Organic Architecture
+#  <img src="{https://github.com/giuliacandido/nanaTech-project/blob/main/images/logo-150px.png}" /> NanaTech | Organic Architecture
 
 ##Form login &amp; Form registration page.
 
