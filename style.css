@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background: url('images/bg-esfumacado2.jpg') no-repeat center / cover fixed;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    max-height: 540px;
+    max-width: 1020px;
+    background-color: #fff;
+    border-radius: 2.1em;
+}
+
+.inner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 3em);
+    height: calc(100% - 3em);
+    transform: translate(-50%, -50%);
+}
+
+.forms {
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.8s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: opacity 0.02s 0.4s;
+}
+
+.logo {
+    display: flex;
+    align-items: self-end;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 50px;
+}
+
+.logo h4 {
+    font-size: 1.1rem;
+    margin-top: -9px;
+    letter-spacing: -0.5px;
+    color: #151111;
+}
+
+.heading {
+    margin-bottom: 0.8em;
+}
+
+.heading h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #151111;
+}
+
+.heading p {
+    color: #151111;
+    font-weight: 400;
+    font-size: 0.65rem;
+    display: inline;
+}
+
+.toggle {
+    color: #151111;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.toggle:hover {
+    color: rgb(102, 177, 102)
+}
+
+.input-field {
+    position: relative;
+    height: 30px;
+    margin-bottom: 2em;
+}
+
+.input-field input {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #000;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #151111;
+    transition: 0.4s;
+}
+
+.input-field label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    color: #bbb;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-field input.active {
+    border-bottom-color: rgb(10, 138, 10);
+}
+.input-field input.active + label {
+    font-size: 0.75rem;
+    top: -2px;
+    color: rgb(10, 138, 10);
+}
+
+.input-field small {
+    position: absolute;
+    bottom: -1.6em;
+    left: 0;
+    font-size: 0.6rem;
+    color: red;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.input-field input.error {
+    border-bottom-color: red;
+}
+
+.input-field label.error {
+    color: red;
+}
+
+.input-field small.error {
+    opacity: 1;
+    pointer-events: all;
+}
+
+form i {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    color: gray;
+    cursor: pointer;
+}
+
+form i.active {
+    color: #000;
+}
+
+.sign-up-form i {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sign-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    background-color: #151111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8em;
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+    transition: 0.3s;
+}
+
+.sign-btn:hover {
+    background-color: rgb(102, 177, 102);
+}
+
+.text {
+    font-size: 0.65rem;
+    color: #151111;
+}
+
+.text a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #151111;
+    transition: 0.3s;
+}
+
+.text a:hover {
+    color: #8371fd;
+}
+
+/* form 2 login */
+
+.sign-in-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sign-in-form .logo{
+    margin-top: -2em;
+}
+
+.sign-in-form .input-field {
+    height: 37px;
+}
+
+.sign-in-form .sign-btn {
+    padding: 1.2em;
+}
+
+main.sign-in-mode form.sign-up-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+main.sign-in-mode form.sign-in-form {
+    opacity: 1;
+    pointer-events: all;
+}
+
+main.sign-in-mode .forms {
+    left: 55%;
+}
+
+main.sign-in-mode .carousel {
+    left: 0%;
+}
+
+
+/*carousel design*/
+
+.carousel {
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transition: 0.8s ease-in-out;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.images-wrap img {
+    width: 100%;
+    border-radius: 2em;
+    margin-bottom: 3em;
+    box-shadow: 17px -11px 28px -25px rgba(0,0,0,0.75);
+}
+
+.images-wrap h2 {
+    text-align: center;
+}
+
+@media (max-width: 850px){
+    .container {
+        height: auto;
+        max-width: 550px;
+        overflow: hidden;
+    }
+
+    .inner-box {
+        position: static;
+        transform: none;
+        width: revert;
+        height: revert;
+        padding: 2em;
+    }
+
+    .forms {
+        position: revert;
+        width: 100%;
+        height: auto;
+    }
+
+    form {
+        max-width: revert;
+        padding: 1.5em 2.5em 2em;
+        transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+    }
+
+    form.sign-in-form {
+        transform: translateX(100%);
+    }
+
+    main.sign-in-mode form.sign-up-form {
+        transform: translateX(-100%);
+    }
+
+    main.sign-in-mode form.sign-in-form {
+        transform: translateX(0%);
+    }
+
+
+    .carousel {
+        display: none;
+    }
+
+    .images-wrap {
+        display: none;
+    }
+}
+
+@media (max-width: 530px){
+    main {
+        padding: 1em;
+    }
+
+    .container {
+        border-radius: 2em;
+    }
+
+    .inner-box {
+        padding: 1em;
+    }
+
+    form {
+        padding: 1em 2em 1.5em;
+    }
+
+    form.sign-in-form .heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .input-field.repeat-psw {
+        display: none;
+    }
+
+    .input-field small.big-message2.error{
+        position: absolute;
+        bottom: -2.8em;
+        left: 0;
+        opacity: 1;
+    }
+
+    .sign-up-form i {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@media (max-width: 360px){
+    form.sign-in-form .heading h2{
+        font-size: 1.5rem;
+    }
+
+    .input-field small.big-message1.error {
+        position: absolute;
+        bottom: -2.7em;
+        left: 0;
+    }
+}
+
